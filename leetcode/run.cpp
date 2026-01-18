@@ -28,25 +28,42 @@
 // }
 
 
-/* 删除索引 index 处的元素 */
-void remove(int *nums, int size, int index) {
-    // 把索引 index 之后的所有元素向前移动一位
-    for(int i = index;i < size-1;i++)
-    {
-        nums[i] = nums[i+1];
-    }
+// /* 删除索引 index 处的元素 */
+// void remove(int *nums, int size, int index) {
+//     // 把索引 index 之后的所有元素向前移动一位
+//     for(int i = index;i < size-1;i++)
+//     {
+//         nums[i] = nums[i+1];
+//     }
 
+// }
+
+// int main()
+// {
+//     std::vector<int> test = {1,2,3,4,5,6,7};
+//     int size = test.size();
+//     remove(test.data(),size,4);
+//     size--; 
+//     for(int i = 0;i<=size-1;i++)
+//     {
+//         std::cout<<test[i]<<" ";
+//     }
+// }
+
+
+void find(const std::vector<int>& nums,int target,int size)
+{
+    for(int i = 0;i <= size-1;i++ )
+    {
+        if(nums[i] == target)
+        {
+            std::cout<<i;
+        }
+    }
 }
 
 int main()
 {
-    std::vector<int> test = {1,2,3,4,5,6,7};
-    int size = test.size();
-    remove(test.data(),size,4);
-    size--; 
-    for(int i = 0;i<=size-1;i++)
-    {
-        std::cout<<test[i]<<" ";
-    }
-    
+    std::vector<int> test = {1,2,3,4,5,6,7,8,9};
+    find(test,9,9);
 }
